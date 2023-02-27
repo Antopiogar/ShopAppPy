@@ -82,7 +82,7 @@ async def delete(id: int = -1):
 
 
 # [UPDATE] :: PUT Method - modify (update) a specific item form index and response with json message
-# example (PUT) ./api/1/apple -> change item at index 3 in apple
+# example (PUT) ./api/1/ -> change item at index 3 
 @webapp.put('/api/')
 async def update(item:Item):
 	oldId=item.id
