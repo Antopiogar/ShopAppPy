@@ -57,12 +57,11 @@ const loadItems =
 
 // DELETE (remove) a selected item by index
 const removeItem = async (id = -1) => {
-	if(id > -1) {
-		const data = await fetch(`./api/${id}`, {method: 'DELETE'})
-			.then(res => res.json())
-			.catch(e => console.error(e));
-		updatePageData();
-	}
+	const data = await fetch(`./api/${id}`, {method: 'DELETE'})
+		.then(res => res.json())
+		.catch(e => console.error(e));
+	updatePageData();
+	
 };
 
 // UPDATE (modify) a selected item by index
